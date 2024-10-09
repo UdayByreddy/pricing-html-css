@@ -1,338 +1,385 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-.outer_container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(240,240,240,255);
-    background-image: url('bg-top.svg'),url('bg-bottom.svg');
-    background-repeat: no-repeat;
-    background-position: bottom right,top left;
-    background-size: 30% auto, 30% auto;
+.outer_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 240, 240, 255);
+  background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right, top left;
+  background-size: 30% auto, 30% auto;
 }
-.container{
-    width: 80%;
-    max-width: 1200px;
-    height: 80%;
-    background-color:  rgba(247,247,255,255);
-    background-image: url('bg-top.svg'),url('bg-bottom.svg');
-    background-position:right top,left bottom;
-    background-repeat: no-repeat;
-    background-size: 30% auto ,30% cover;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 2px 2px 2px hsl(237, 63%, 64%);
+.container {
+  width: 80%;
+  max-width: 1200px;
+  height: 80%;
+  background-color: rgba(247, 247, 255, 255);
+  background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+  background-position: right top, left bottom;
+  background-repeat: no-repeat;
+  background-size: 30% auto, 30% cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 2px hsl(237, 63%, 64%);
 }
 
 /** header_pricing **/
-.header_pricing{
-    font-size: 40px;
-    font-family: Montserrat;
-    font-weight: bolder;
+.header_pricing {
+  font-size: 40px;
+  font-family: Montserrat;
+  font-weight: bolder;
 }
-.top_checkbox{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-top: 20px;
+.top_checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
 }
-.toggle{
-    width: 50px;
-    height: 30px;
-    border-radius: 50px;
-    background-color: rgb(37, 37, 248);
-    cursor: pointer;
-    position: relative;
-    transition: 0.2s;
+.toggle {
+  width: 50px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: rgb(37, 37, 248);
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
 }
-.toggle::before{
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 25px; 
-    border-radius: 50%;
-    background-color: #ffffff;
-    top: 2px;
-    left: 3px;
-    transition: 0.2s;
+.toggle::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 2px;
+  left: 3px;
+  transition: 0.2s;
 }
-.input_checkbox:checked+.toggle{
-    background-color:  rgb(37, 37, 248);
+.input_checkbox:checked + .toggle {
+  background-color: rgb(37, 37, 248);
 }
-.input_checkbox:checked+.toggle::before{
-    transform: translateX(20px);
+.input_checkbox:checked + .toggle::before {
+  transform: translateX(20px);
+}
+.input_checkbox {
+  display: none;
+}
 
+.toggle_names,
+.toggle_names1 {
+  font-size: 15px;
+  color: rgb(151, 151, 151);
+  font-weight: 700;
+  margin-right: 10px;
 }
-.input_checkbox{
-    display: none;
-}
-
-.toggle_names,.toggle_names1{
-    font-size: 15px;
-    color: rgb(151, 151, 151);
-    font-weight: 700;
-    margin-right: 10px;
-}
-.toggle_names1{
-    margin-left: 10px;
+.toggle_names1 {
+  margin-left: 10px;
 }
 
 /** profesoional content **/
 
 /* Main Content */
 .main_content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
 }
 
 /* Common Content Styling for Professional and Basic */
-.Professiona_content, .basic_content ,.Master_content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 80px;
-    width: 30%;
-    height: 90%;
-    background-color: hsl(237, 63%, 64%);
-    border-radius: 8px;
-    box-shadow: 2px 2px 2px hsl(240, 78%, 98%);
+.Professional_content,
+.basic_content,
+.Master_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 80px;
+  width: 30%;
+  height: 90%;
+  background-color: hsl(237, 63%, 64%);
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px hsl(240, 78%, 98%);
 }
 
-.Professiona_content:hover,.basic_content:hover,.Master_content:hover{
-    transform: scale(1.1);
+.Professional_content:hover,
+.basic_content:hover,
+.Master_content:hover {
+  transform: scale(1.1);
 }
 
 /* Specific Styling for Basic Content  and Master content */
-.basic_content,.Master_content {
-    width: 25%;
-    height: 80%;
-    background-color: rgba(255,255,255,255);
+.basic_content,
+.Master_content {
+  width: 25%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 255);
 }
 
 /* Label Styling */
-.Professional_label, .basic_label,.Master_label {
-    font-size: 1.2rem;
-    font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.Professional_label,
+.basic_label,
+.Master_label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .Professional_label {
-    color: white;
+  color: white;
 }
 
-.basic_label,.Master_label {
-    color: rgb(66, 66, 66);
+.basic_label,
+.Master_label {
+  color: rgb(66, 66, 66);
 }
 
 /* Price Content Styling */
-.Professional_price, .basic_price,.Master_price {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-overflow: ellipsis;
+.Professional_price,
+.basic_price,
+.Master_price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-overflow: ellipsis;
 }
 
-.professional_price_content1, .basic_price_content1 ,.Master_price_content1{
-    font-weight: 700;
+.professional_price_content1,
+.basic_price_content1,
+.Master_price_content1 {
+  font-weight: 700;
 }
 
 .professional_price_content1 {
-    font-size: 50px;
-    color: hsl(240, 78%, 98%);
+  font-size: 50px;
+  color: hsl(240, 78%, 98%);
 }
 
-.basic_price_content1 ,.Master_price_content1{
-    font-size: 40px;
-    color: rgb(66, 66, 66);
+.basic_price_content1,
+.Master_price_content1 {
+  font-size: 40px;
+  color: rgb(66, 66, 66);
 }
 
-.professional_price_content2, .basic_price_content2,.Master_price_content2 {
-    font-weight: 700;
+.professional_price_content2,
+.basic_price_content2,
+.Master_price_content2 {
+  font-weight: 700;
 }
 
 .professional_price_content2 {
-    font-size: 100px;
-    color: hsl(240, 78%, 98%);
+  font-size: 100px;
+  color: hsl(240, 78%, 98%);
 }
 
-.basic_price_content2,.Master_price_content2 {
-    font-size: 90px;
-    color: rgb(66, 66, 66);
+.basic_price_content2,
+.Master_price_content2 {
+  font-size: 90px;
+  color: rgb(66, 66, 66);
 }
 
 /* Input Styling */
-.Professiona_input, .basic_input,.Master_input {
-    padding: 15px;
-    text-align: center;
-    font-size: 15px;
-    font-family: Montserrat;
-    border: none;
-    width: 70%;
-    cursor: default;
-    user-select: none;
-    caret-color: transparent;
+.Professional_input,
+.basic_input,
+.Master_input {
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-family: Montserrat;
+  border: none;
+  width: 70%;
+  cursor: default;
+  user-select: none;
+  caret-color: transparent;
 }
 
-.Professiona_input {
-    background-color: hsl(237, 63%, 64%);
-    border-top: 0.1px dotted hsl(240, 78%, 98%);
-    border-bottom: 0.1px dotted hsl(240, 78%, 98%);
+.Professional_input {
+  background-color: hsl(237, 63%, 64%);
+  border-top: 0.1px dotted hsl(240, 78%, 98%);
+  border-bottom: 0.1px dotted hsl(240, 78%, 98%);
 }
 
-.basic_input,.Master_input {
-    background-color: rgba(255,255,255,255);
-    border-top: 1px dotted hsl(240, 10%, 50%); 
-    border-bottom: 1px dotted hsl(240, 10%, 50%); 
+.basic_input,
+.Master_input {
+  background-color: rgba(255, 255, 255, 255);
+  border-top: 1px dotted hsl(240, 10%, 50%);
+  border-bottom: 1px dotted hsl(240, 10%, 50%);
 }
 
 /* Placeholder Styling */
-.Professiona_input::placeholder, .basic_input::placeholder,.Master_input::placeholder {
-    font-size: 15px;
-    font-weight: 700;
+.Professional_input::placeholder,
+.basic_input::placeholder,
+.Master_input::placeholder {
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.Professiona_input::placeholder {
-    color: hsl(240, 78%, 98%);
+.Professional_input::placeholder {
+  color: hsl(240, 78%, 98%);
 }
 
-.basic_input::placeholder,.Master_input::placeholder {
-    color: rgb(66, 66, 66);
+.basic_input::placeholder,
+.Master_input::placeholder {
+  color: rgb(66, 66, 66);
 }
 
 /* Button Styling */
-.Professional_button, .basic_button,.Master_button{
-    width: 80%;
-    height: 9%;
-    font-size: 0.9rem;
-    font-family: Montserrat;
-    font-weight: 700;
-    border: none;
-    border-radius: 5px;
-    /*cursor: url('kindpng_47076.png') auto;*/
-    cursor: pointer;
-    opacity: 1;
+.Professional_button,
+.basic_button,
+.Master_button {
+  width: 80%;
+  height: 9%;
+  font-size: 0.9rem;
+  font-family: Montserrat;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+   /*cursor: url('./images/pointinghand.svg') auto;*/
+   cursor: pointer;
+  opacity: 1;
 }
 
 .Professional_button {
-    color: hsl(237, 63%, 64%);
-    background-color: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
+  background-color: hsl(240, 78%, 98%);
 }
 
-.basic_button,.Master_button {
-    color: hsl(240, 78%, 98%);
-    background-color: hsl(237, 63%, 64%);
+.basic_button,
+.Master_button {
+  color: hsl(240, 78%, 98%);
+  background-color: hsl(237, 63%, 64%);
 }
 
-.Professional_button:hover, .basic_button:hover,.Master_button:hover{
-    opacity: 0.7;
+.Professional_button:hover,
+.basic_button:hover,
+.Master_button:hover {
+  opacity: 0.7;
 }
 
 /** bottom_elements **/
-.bottom_elements{
-    position: absolute;
-    bottom: -100px;
-    left: 30px;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
+.bottom_elements {
+  position: absolute;
+  bottom: -100px;
+  left: 30px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
 }
-.element1,.element2,.element3,.element4{
-    width: 80%;
-    display: flex;
+.element1,
+.element2,
+.element3,
+.element4 {
+  width: 80%;
+  display: flex;
 }
-.element1 div,.element2 div,.element3 div,.element4 div{
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    background-color: #6bbad1;
-    margin-left: 2px;
-    margin-bottom: 2px;
+.element1 div,
+.element2 div,
+.element3 div,
+.element4 div {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #6bbad1;
+  margin-left: 2px;
+  margin-bottom: 2px;
 }
 
 /** for mobile version **/
-    @media (max-width: 480px) {
-        .container{
-            width: 95%;
-            height: 90%;
-            padding: 15px;
-        }
-        /**header **/
-        .header_pricing{
-            font-size: 1.5rem;
-        }
-        /** main content **/
-        .main_content{
-           flex-direction: column;
-           justify-content: space-around;
-           width: 100%;
-           height: 100%;
-        }
-        .Professiona_content,.basic_content,.Master_content{
-            width: 90%;
-            height: 100%;
-            margin-top: 20px;
-            padding: 40px 0px;
-            justify-content: space-evenly;
-        }
-        .Professiona_content:hover,.basic_content:hover,.Master_content:hover{
-            transform: scale(1.1);
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    height: 90%;
+    padding: 15px;
+  }
+  /**header **/
+  .header_pricing {
+    font-size: 1.5rem;
+  }
+  /** main content **/
+  .main_content {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+  .Professional_content,
+  .basic_content,
+  .Master_content {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    padding: 40px 0px;
+    justify-content: space-evenly;
+  }
+  .Professional_content:hover,
+  .basic_content:hover,
+  .Master_content:hover {
+    transform: scale(1.1);
+  }
+  .Professional_label,
+  .basic_label,
+  .Master_label {
+    font-size: 1.2rem;
+  }
+  .Professional_input,
+  .basic_input,
+  .Master_input {
+    padding: 10px;
+  }
+  /** price content **/
+  .professional_price_content1 {
+    font-size: 2.1rem;
+  }
+  .professional_price_content2 {
+    font-size: 4rem;
+  }
+  .basic_price_content1,
+  .Master_price_content1 {
+    font-size: 2.1rem;
+  }
+  .basic_price_content2,
+  .Master_price_content2 {
+    font-size: 4rem;
+  }
+  /**inputs **/
+  .Professional_input::placeholder,
+  .basic_input::placeholder,
+  .Master_input::placeholder {
+    font-size: 0.8rem;
+  }
 
-        }
-        .Professional_label,.basic_label,.Master_label{
-            font-size: 1.2rem;
-        }
-        .Professiona_input, .basic_input,.Master_input{
-            padding: 10px;
-        }
-        /** price content **/
-        .professional_price_content1{
-            font-size: 2.1rem;
-        }
-        .professional_price_content2{
-            font-size: 4rem;
-        }
-        .basic_price_content1 ,.Master_price_content1{
-            font-size: 2.1rem;
-        }
-        .basic_price_content2 ,.Master_price_content2{
-            font-size: 4rem;
-        }
-        /**inputs **/
-        .Professiona_input::placeholder, .basic_input::placeholder,.Master_input::placeholder{
-            font-size: 0.8rem;
-        }
-
-        /** button **/
-        .Professional_button,.basic_button,.Master_button{
-            margin-top: 10px;
-            font-size: 0.9rem;
-            width: 80%;
-            height: 20%;
-            padding: 6px;
-        }
-        /** bottom **/
-        .element1 div,.element2 div,.element3 div,.element4 div{
-            width: 8px;
-            height: 8px;
-            border-radius: 8px;
-        }
-        .bottom_elements{
-            bottom: -160px;
-        }
-        .top_checkbox{
-            margin-top: 5px;
-    
-        }
+  /** button **/
+  .Professional_button,
+  .basic_button,
+  .Master_button {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    width: 80%;
+    height: 20%;
+    padding: 6px;
+  }
+  /** bottom **/
+  .element1 div,
+  .element2 div,
+  .element3 div,
+  .element4 div {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+  }
+  .bottom_elements {
+    bottom: -160px;
+  }
+  .top_checkbox {
+    margin-top: 5px;
+  }
 }
-
