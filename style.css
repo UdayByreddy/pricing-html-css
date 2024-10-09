@@ -1,91 +1,100 @@
+/* Global reset */
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+body {
+  overflow: hidden;
+}
+/* Outer container */
 .outer_container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(240, 240, 240, 255);
+  background-color: rgba(240, 240, 240, 1);
   background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
   background-repeat: no-repeat;
   background-position: bottom right, top left;
   background-size: 30% auto, 30% auto;
+  overflow: hidden;
 }
+
+/* Main container */
 .container {
   width: 80%;
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px converted to rem */
   height: 80%;
-  background-color: rgba(247, 247, 255, 255);
+  background-color: rgba(247, 247, 255, 1);
   background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
   background-position: right top, left bottom;
   background-repeat: no-repeat;
-  background-size: 30% auto, 30% cover;
+  background-size: 30vw auto, 30vw cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 2px hsl(237, 63%, 64%);
 }
 
-/** header_pricing **/
+/* Header Pricing */
 .header_pricing {
-  font-size: 40px;
-  font-family: Montserrat;
+  font-size: 2rem;
+  font-family: Montserrat, sans-serif;
   font-weight: bolder;
 }
+
+/* Checkbox section */
 .top_checkbox {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
+
 .toggle {
-  width: 50px;
-  height: 30px;
+  width: 3.125rem;
+  height: 1.875rem;
   border-radius: 50px;
   background-color: rgb(37, 37, 248);
   cursor: pointer;
   position: relative;
   transition: 0.2s;
 }
+
 .toggle::before {
   position: absolute;
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   border-radius: 50%;
   background-color: #ffffff;
-  top: 2px;
-  left: 3px;
+  top: 0.125rem;
+  left: 0.1875rem;
   transition: 0.2s;
 }
-.input_checkbox:checked + .toggle {
-  background-color: rgb(37, 37, 248);
-}
+
 .input_checkbox:checked + .toggle::before {
-  transform: translateX(20px);
+  transform: translateX(1.25rem);
 }
+
 .input_checkbox {
   display: none;
 }
 
 .toggle_names,
 .toggle_names1 {
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: rgb(151, 151, 151);
   font-weight: 700;
-  margin-right: 10px;
 }
+
 .toggle_names1 {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
-/** profesoional content **/
-
-/* Main Content */
+/* Main content section */
 .main_content {
   display: flex;
   justify-content: center;
@@ -94,7 +103,7 @@
   height: 80%;
 }
 
-/* Common Content Styling for Professional and Basic */
+/* Content cards */
 .Professional_content,
 .basic_content,
 .Master_content {
@@ -102,12 +111,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 5rem;
   width: 30%;
   height: 90%;
   background-color: hsl(237, 63%, 64%);
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px hsl(240, 78%, 98%);
+  border-radius: 0.5rem;
+  box-shadow: 0.125rem 0.125rem 0.125rem hsl(240, 78%, 98%);
+  transition: transform 0.3s;
 }
 
 .Professional_content:hover,
@@ -116,15 +126,15 @@
   transform: scale(1.1);
 }
 
-/* Specific Styling for Basic Content  and Master content */
+/* Basic and Master content card styles */
 .basic_content,
 .Master_content {
   width: 25%;
   height: 80%;
-  background-color: rgba(255, 255, 255, 255);
+  background-color: #ffffff;
 }
 
-/* Label Styling */
+/* Labels */
 .Professional_label,
 .basic_label,
 .Master_label {
@@ -142,14 +152,13 @@
   color: rgb(66, 66, 66);
 }
 
-/* Price Content Styling */
+/* Price section */
 .Professional_price,
 .basic_price,
 .Master_price {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-overflow: ellipsis;
 }
 
 .professional_price_content1,
@@ -159,13 +168,13 @@
 }
 
 .professional_price_content1 {
-  font-size: 50px;
+  font-size: 3.125rem;
   color: hsl(240, 78%, 98%);
 }
 
 .basic_price_content1,
 .Master_price_content1 {
-  font-size: 40px;
+  font-size: 2.5rem;
   color: rgb(66, 66, 66);
 }
 
@@ -176,23 +185,23 @@
 }
 
 .professional_price_content2 {
-  font-size: 100px;
+  font-size: 6.25rem;
   color: hsl(240, 78%, 98%);
 }
 
 .basic_price_content2,
 .Master_price_content2 {
-  font-size: 90px;
+  font-size: 5.625rem;
   color: rgb(66, 66, 66);
 }
 
-/* Input Styling */
+/* Inputs */
 .Professional_input,
 .basic_input,
 .Master_input {
-  padding: 15px;
+  padding: 0.9375rem;
   text-align: center;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-family: Montserrat;
   border: none;
   width: 70%;
@@ -209,16 +218,15 @@
 
 .basic_input,
 .Master_input {
-  background-color: rgba(255, 255, 255, 255);
+  background-color: #ffffff;
   border-top: 1px dotted hsl(240, 10%, 50%);
   border-bottom: 1px dotted hsl(240, 10%, 50%);
 }
 
-/* Placeholder Styling */
 .Professional_input::placeholder,
 .basic_input::placeholder,
 .Master_input::placeholder {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
 }
 
@@ -231,7 +239,7 @@
   color: rgb(66, 66, 66);
 }
 
-/* Button Styling */
+/* Buttons */
 .Professional_button,
 .basic_button,
 .Master_button {
@@ -241,10 +249,8 @@
   font-family: Montserrat;
   font-weight: 700;
   border: none;
-  border-radius: 5px;
-   /*cursor: url('./images/pointinghand.svg') auto;*/
-   cursor: pointer;
-  opacity: 1;
+  border-radius: 0.3125rem;
+  cursor: pointer;
 }
 
 .Professional_button {
@@ -264,122 +270,141 @@
   opacity: 0.7;
 }
 
-/** bottom_elements **/
+/* Bottom elements */
 .bottom_elements {
   position: absolute;
-  bottom: -100px;
-  left: 30px;
-  width: 200px;
-  height: 200px;
+  bottom: -6.25rem;
+  left: 1.875rem;
+  width: 12.5rem;
+  height: 12.5rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
+
 .element1,
 .element2,
 .element3,
 .element4 {
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
 }
+
 .element1 div,
 .element2 div,
 .element3 div,
 .element4 div {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
   background-color: #6bbad1;
-  margin-left: 2px;
-  margin-bottom: 2px;
+  margin-left: 0.125rem;
+  margin-bottom: 0.125rem;
 }
 
-/** for mobile version **/
-@media (max-width: 480px) {
+/* Media query for mobile screens */
+/* Media query for 344px screen width to 1024px*/
+@media (min-width: 320px) and (max-width: 1024px) {
+  html {
+    overflow-y: scroll;
+  }
+
+  /* Outer container */
+  .outer_container {
+    background-size: 40% auto, 40% auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  /* Main container */
   .container {
     width: 95%;
-    height: 90%;
-    padding: 15px;
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    background-size: 50% auto, 50% auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
-  /**header **/
-  .header_pricing {
-    font-size: 1.5rem;
-  }
-  /** main content **/
-  .main_content {
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-  }
+  /* Price section */
   .Professional_content,
   .basic_content,
   .Master_content {
     width: 90%;
-    height: 100%;
-    margin-top: 20px;
-    padding: 40px 0px;
-    justify-content: space-evenly;
+    height: auto;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    overflow: hidden;
   }
-  .Professional_content:hover,
-  .basic_content:hover,
-  .Master_content:hover {
-    transform: scale(1.1);
-  }
-  .Professional_label,
-  .basic_label,
-  .Master_label {
-    font-size: 1.2rem;
-  }
-  .Professional_input,
-  .basic_input,
-  .Master_input {
-    padding: 10px;
-  }
-  /** price content **/
-  .professional_price_content1 {
-    font-size: 2.1rem;
-  }
-  .professional_price_content2 {
-    font-size: 4rem;
-  }
+  .professional_price_content1,
   .basic_price_content1,
   .Master_price_content1 {
-    font-size: 2.1rem;
+    font-size: 1.5rem;
   }
+  .professional_price_content2,
   .basic_price_content2,
   .Master_price_content2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
-  /**inputs **/
-  .Professional_input::placeholder,
-  .basic_input::placeholder,
-  .Master_input::placeholder {
-    font-size: 0.8rem;
-  }
-
-  /** button **/
+  /* Button */
   .Professional_button,
   .basic_button,
   .Master_button {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    width: 80%;
-    height: 20%;
-    padding: 6px;
+    width: 85%;
+    margin: 1rem auto;
+    padding: 0.75rem 1rem;
   }
-  /** bottom **/
-  .element1 div,
-  .element2 div,
-  .element3 div,
-  .element4 div {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
+
+  /*Inputs */
+  .Professional_input,
+  .basic_input,
+  .Master_input {
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .Professional_input::placeholder,
+  .basic_input::placeholder,
+  .Master_input::placeholder {
+    font-size: 0.75rem;
+  }
+
+  /* header pricing */
+  .header_pricing {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .main_content {
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .Professional_content,
+  .basic_content,
+  .Master_content {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .bottom_elements {
-    bottom: -160px;
+    display: none;
   }
-  .top_checkbox {
-    margin-top: 5px;
+}
+
+/* For diffrent device setting differnt width and height */
+@media (min-width: 320px) and (max-width: 800px) {
+  .outer_container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* For screens between 801px and 1024px */
+@media (min-width: 801px) and (max-width: 1024px) {
+  .outer_container {
+    width: 100vw;
+    height: 100vh;
   }
 }
